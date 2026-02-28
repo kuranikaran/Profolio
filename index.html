@@ -564,6 +564,13 @@
                 menu.classList.remove("active");
             }
         });
+        const menuLinks = document.querySelectorAll("#mobileMenu a");
+
+menuLinks.forEach(link => {
+    link.addEventListener("click", function () {
+        menu.classList.remove("active");
+    });
+});
     </script>
 </body>
 
