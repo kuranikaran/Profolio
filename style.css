@@ -632,3 +632,11 @@ footer {
     max-width: 90%;
     border-radius: 20px;
 }
+.mobile-menu {
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
