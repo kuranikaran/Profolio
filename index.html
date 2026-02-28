@@ -17,7 +17,7 @@
 
     <nav class="navbar">
         <div class="nav-left">
-            <div class="hamburger" onclick="toggleMenu()">
+            <div class="hamburger">
                 <span></span>
                 <span></span>
             </div>
@@ -128,10 +128,9 @@
                 <p>Contributed to NYMEGA AI-SCADA visualization modeling, mapping control flow and entity interactions to enhance red team training realism.</p>
             </div>
 
-            <div class="endorsement-video" style="margin-top: 40px;">
-                <video controls style="width:100%; border-radius: 12px;">
-                    <source src="images/ICS.mp4" type="video/mp4">
-                </video>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 30px 0;">
+                <iframe src="https://www.youtube.com/embed/P8EcL9ViJws" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
             </div>
 
             <p style="margin-top: 18px; font-size: 14px; opacity: 0.6; text-align: center;">
@@ -315,22 +314,33 @@
             </p>
         </div>
         <div class="endorsement-video">
-            <video controls>
-                <source src="images/prof.mp4" type="video/mp4">
-            </video>
-        </div>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0;">
 
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 30px 0;">
+                    <iframe src="https://www.youtube.com/embed/P8EcL9ViJws" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+                <p style="margin-top: 18px; font-size: 14px; opacity: 0.6; text-align: center;">
+                    Faculty endorsement highlighting my structured security research, statistical depth, and adversarial mindset.
+                </p>
+                <div style="text-align:center; margin-top: 20px;">
+                    <button onclick="window.open('icsreport.pdf', '_blank')" style="
+    background: transparent;
+    color: #f5f5f5;
+    border: 1px solid #555;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+">
+                        More Endorsements
+                    </button>
+                </div>
 
+            </div>
 
-        <div class="experience-block">
-            Additional professional recommendations available on
-            <a href="https://www.linkedin.com/in/karan-kurani/details/recommendations/" target="_blank">
-        LinkedIn
-    </a>
-        </div>
     </section>
-
-    <!-- CERTIFICATIONS -->
     <section class="section fade-in" id="certifications">
         <h2 class="gradient-scroll">Certifications</h2>
 
@@ -540,6 +550,21 @@
         </div>
     </div>
     <!-- I see You :) try searching flag in search bar. This website has been vibecoded by Karan Kurani contact me @karankurani3k@gmail.com  -->
+    <script>
+        const menu = document.getElementById("mobileMenu");
+        const hamburger = document.querySelector(".hamburger");
+        
+        hamburger.addEventListener("click", function (e) {
+            e.stopPropagation(); // prevent immediate close
+            menu.classList.toggle("active");
+        });
+        
+        document.addEventListener("click", function (e) {
+            if (menu.classList.contains("active") && !menu.contains(e.target)) {
+                menu.classList.remove("active");
+            }
+        });
+    </script>
 </body>
 
 </html>
