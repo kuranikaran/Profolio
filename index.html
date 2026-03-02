@@ -80,22 +80,22 @@
 
     <p>
         Remote Code Execution (RCE)<br>
-        • CVE-2025-55182 - React Server Component RCE  <br> 
-        • Multiple AWS hosted domains, LOCO, Gangwon Tourism, Civil Police of Alagoas <br>
-        • Times Internet / Economic Times - CERT-In Acknowledged
+        • CVE-2025-55182 — React Server Component RCE — Discovered via passive reconnaissance using FOFA and Shodan API. Responsibly reported affected domains including The Economic Times (Times Internet) and multiple AWS-hosted applications. CERT-In acknowledged.
     </p>
        <br> 
     <p>
         Access Control & Authorization Flaws<br>
-        • Public Sharing Disabled Bypass - Metabase<br>
-        • OAuth 2.0 ROPC Misconfiguration - Infosys
+ • Uptime Kuma (Open Source, 83K+ GitHub Stars) — Discovered missing authorization check on the ping badge endpoint (CWE-862) that leaked private monitor response times to unauthenticated users. Moderate severity. Accepted by maintainers, patch developed, CVE pending. GHSA-c7hf-c5p5-5g6h <br>
+ • Metabase (Open Source, 46K+ GitHub Stars) — Identified public sharing disabled bypass via the parameter values endpoint, allowing unauthenticated access to dataset values even after public sharing was explicitly disabled. Confirmed and reproduced by Metabase security team; patches being rolled out for impacted versions.<br>
+ • Infosys (career.infosys.com) — Disclosed insecure OAuth 2.0 Password Grant (ROPC) enabled on production Keycloak IAM, allowing token issuance via direct credential submission. Acknowledged by CERT-In.
     </p>
   <br> 
     <p>
         Information Disclosure<br>
-        • Microsoft OneDrive XS-Search Timing Side-Channel VULN-168115<br>
-        • PKCE Logging Exposure - Pretix<br>
-        • Cloud-hosted passive data exposure on AWS
+        • ChatGPT Atlas (OpenAI) — Identified insecure local logging behavior in the Atlas macOS browser where world-readable debug logs (644 permissions) persisted third-party renderer console output including OAuth tokens. Submitted via Bugcrowd; classified as informational hardening recommendation. (2026)<br>
+ •Pretix (Open Source) — Identified configuration parsing flaw in request_id_header handling leading to potential log injection. Responsibly disclosed and acknowledged by maintainers. PR #5920<br>
+ •NASA — Discovered sensitive system data exposure via passive reconnaissance and endpoint analysis.<br>
+ •Mercedes-Benz Xentry Update Service — Identified publicly accessible OTA update directories exposing internal metadata and release-cycle artifacts.
     </p>
   <br> 
     <p>
