@@ -1049,3 +1049,51 @@ footer {
         gap: 10px;
     }
 }
+
+/* Inline SVG icon sizing */
+.disc-svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* CVE Showcase - Apple style */
+.cve-showcase {
+    max-width: 700px;
+    margin: 80px auto 0;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cve-showcase-inner {
+    display: inline-block;
+}
+
+.cve-showcase-id {
+    font-size: 72px;
+    font-weight: 800;
+    letter-spacing: -2.5px;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #ff375f, #ff6b8a, #bf5af2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.cve-showcase-sub {
+    font-size: 17px;
+    color: #86868b;
+    margin-top: 12px;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .cve-showcase-id {
+        font-size: 40px;
+        letter-spacing: -1.5px;
+    }
+    .cve-showcase-sub {
+        font-size: 14px;
+    }
+}
